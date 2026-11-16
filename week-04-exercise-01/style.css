@@ -1,0 +1,112 @@
+
+/* Week 04 Exercise 01 - Dev Tools Vandalism */
+/* Château de l'Héritage Inspired Design */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.8;
+    background-color: #F8F3EC;
+    color: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+    padding: 45px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8C4A0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Main Page Heading */
+
+h1 {
+    color: #8B1E3F;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Section Heading */
+
+h2 {
+    color: #8B1E3F;
+    font-size: 26px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #C5A46D;
+    padding-bottom: 12px;
+}
+
+/* Paragraph Styling */
+
+p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+/* Screenshot Display */
+
+.screenshot-container {
+    margin: 35px 0;
+    padding: 15px;
+    background-color: #F8F3EC;
+    border: 2px solid #C5A46D;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.screenshot-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    main {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .screenshot-container {
+        padding: 8px;
+    }
+}
