@@ -1,0 +1,170 @@
+
+/* WEEK 04 EXERCISE 02 */
+/* THE VINYL VAULT */
+
+/* UNIVERSAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+/* PAGE SETUP */
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #F8F3EC;
+    color: #292929;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+/* MAIN CONTENT AREA */
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #C5A46D;
+    border-radius: 12px;
+}
+
+/* MAIN PAGE HEADING */
+
+h1 {
+    color: #8B1E3F;
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+/* INTRODUCTION PARAGRAPH */
+
+main > p {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* FLEXBOX COLLECTION GRID */
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 48px 0;
+}
+
+/* INDIVIDUAL ALBUM CARDS */
+
+.collection-card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    min-width: 0;
+
+    background-color: #FFFFFF;
+    border: 1px solid #C5A46D;
+    border-radius: 12px;
+    padding: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ALBUM COVER IMAGES */
+
+.collection-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ALBUM TITLE */
+
+.collection-card h2 {
+    color: #8B1E3F;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ALBUM DETAILS */
+
+.collection-card .details {
+    color: #80663A;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+/* PERSONAL DESCRIPTIONS */
+
+.collection-card .description {
+    color: #292929;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* TABLET: TWO COLUMNS */
+
+@media (width >= 480px) {
+    .collection-card {
+        flex-basis: 45%;
+    }
+}
+
+/* DESKTOP: THREE COLUMNS */
+
+@media (width >= 1024px) {
+    .collection-card {
+        flex-basis: 30%;
+    }
+}
+
+/* SMALL MOBILE SCREEN ADJUSTMENTS */
+
+@media (width < 480px) {
+    body {
+        padding: 15px;
+    }
+
+    main {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .collection-card {
+        padding: 15px;
+    }
+}
