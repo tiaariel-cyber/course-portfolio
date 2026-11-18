@@ -1,99 +1,80 @@
+/* Week 04 Exercise 02: The Vinyl Vault */
+/* Responsive vinyl collection using Flexbox and media queries */
 
-/* WEEK 04 EXERCISE 02 */
-/* THE VINYL VAULT */
-
-/* UNIVERSAL STYLING */
-
+/* Make padding and borders part of each element's width. */
 * {
     box-sizing: border-box;
 }
 
-/* PAGE SETUP */
-
 html,
 body {
-    min-height: 100vh;
     margin: 0;
+    min-height: 100%;
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
     background-color: #F8F3EC;
     color: #292929;
-    line-height: 1.7;
-    padding: 40px 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-/* MAIN CONTENT AREA */
-
+/* Center the main content and create a polished page frame. */
 main {
-    max-width: 1200px;
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 24px;
     background-color: #FFFFFF;
     border: 1px solid #C5A46D;
     border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
 }
-
-/* MAIN PAGE HEADING */
 
 h1 {
     color: #8B1E3F;
-    font-size: 48px;
-    font-weight: normal;
+    font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.2;
+    font-weight: normal;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 30px;
+    margin: 16px 0 24px;
 }
 
-/* INTRODUCTION PARAGRAPH */
-
+/* Only the introduction paragraph directly inside main. */
 main > p {
     max-width: 800px;
-    margin: 0 auto 35px;
+    margin: 0 auto 32px;
     text-align: center;
-    font-size: 17px;
-    line-height: 1.8;
+    font-size: 1.05rem;
 }
 
-/* FLEXBOX COLLECTION GRID */
-
+/* FLEXBOX: arrange the six album cards in wrapping rows. */
 .collection-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin: 48px 0;
+    margin: 32px 0 8px;
 }
 
-/* INDIVIDUAL ALBUM CARDS */
-
+/* MOBILE FIRST: one card per row. */
 .collection-card {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 100%;
     min-width: 0;
-
-    background-color: #FFFFFF;
+    padding: 18px;
+    background-color: #FFFDF9;
     border: 1px solid #C5A46D;
     border-radius: 12px;
-    padding: 20px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* HOVER EFFECT */
 
 .collection-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-
-/* ALBUM COVER IMAGES */
 
 .collection-card img {
     display: block;
@@ -101,70 +82,54 @@ main > p {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-/* ALBUM TITLE */
-
-.collection-card h2 {
-    color: #8B1E3F;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.3;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-/* ALBUM DETAILS */
-
-.collection-card .details {
-    color: #80663A;
-    font-size: 14px;
-    font-style: italic;
     margin-bottom: 16px;
 }
 
-/* PERSONAL DESCRIPTIONS */
+.collection-card h2 {
+    color: #8B1E3F;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+
+.collection-card .details {
+    color: #80663A;
+     font-size: 0.9rem;
+    font-style: italic;
+    margin: 0 0 14px;
+}
 
 .collection-card .description {
-    color: #292929;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 0;
+    margin: 0;
 }
 
-/* TABLET: TWO COLUMNS */
-
+/* TABLET: two cards per row at 480px and above. */
 @media (width >= 480px) {
     .collection-card {
-        flex-basis: 45%;
+        flex-basis: calc((100% - 24px) / 2);
     }
 }
 
-/* DESKTOP: THREE COLUMNS */
-
+/* DESKTOP: three cards per row at 1024px and above. */
 @media (width >= 1024px) {
     .collection-card {
-        flex-basis: 30%;
+        flex-basis: calc((100% - 48px) / 3);
     }
 }
 
-/* SMALL MOBILE SCREEN ADJUSTMENTS */
-
+/* Small screens get tighter outer spacing. */
 @media (width < 480px) {
     body {
-        padding: 15px;
+        padding: 12px;
     }
 
     main {
-        padding: 18px;
-    }
-
-    h1 {
-        font-size: 34px;
+        padding: 16px;
     }
 
     .collection-card {
-        padding: 15px;
+        padding: 14px;
     }
 }
