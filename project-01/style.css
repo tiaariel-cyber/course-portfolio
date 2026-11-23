@@ -192,3 +192,42 @@ header nav a:focus-visible {
     outline: 3px solid var(--color-gold);
     outline-offset: 5px;
 }
+
+/* About Me Section */
+
+#about {
+    padding: 100px 60px;
+    background-color: var(--color-cream);
+    border-bottom: 1px solid var(--color-gold);
+}
+
+#about h2 {
+    color: var(--color-burgundy);
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+}
+
+#about h3 {
+    color: var(--color-black);
+    font-size: 28px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding-left: 20px;
+    border-left: 3px solid var(--color-gold);
+}
+
+#about p {
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 780px;
+    margin-bottom: 24px;
+}
+
+#about p:first-of-type {
+    font-size: 19px;
+    color: var(--color-black);
+}
