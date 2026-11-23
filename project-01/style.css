@@ -1,0 +1,194 @@
+/* Project 01: Personal Landing Page */
+/* Tiara Anderson */
+
+/* Color Palette */
+
+:root {
+    --color-cream: #f8f5f0;
+    --color-black: #000000;
+    --color-burgundy: #722f42;
+    --color-blue: #4169e1;
+    --color-gold: #b79660;
+    --color-white: #ffffff; 
+}
+
+/* Universal Styling */
+
+*{
+    box-sizing: border-box;
+}
+
+/* Page Setup */
+
+body {
+    margin: 0;
+    background-color: var(--color-cream);
+    color: var(--color-black);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.7;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header nav a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-blue);
+}
+
+header nav a:focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 5px;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Header and Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    background-color: var(--color-cream);
+    border-bottom: 1px solid var(--color-gold);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header nav a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-blue);
+}
+
+header nav a:focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 5px;
+}
+
+/* Hero Section */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 500px;
+    padding: 80px 60px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+#hero h2 {
+    font-size: 64px;
+    font-weight: normal;
+    line-height: 1.1;
+    max-width: 750px;
+    margin: 20px 0;
+}
+
+#hero p:first-of-type {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+#hero p:last-of-type {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+#hero a {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--color-cream);
+    color: var(--color-blue);
+    border: 2px solid var(--color-cream);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+#hero a:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+#hero a:focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 5px;
+}
